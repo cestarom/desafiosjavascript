@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Calculo de troco</h1>
+    <button onclick="media()">Calcular troco</button>
+    <section id="situacao">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+    <script>
+    
+        function media() {
+            let nom = window.prompt('O que voce comprou?')
+            let n1 = Number(window.prompt(`Quanto pagou pelo ${nom}?`))
+            let n2 = Number(window.prompt(`Quanto voce deu de dinheiro?`))
+            soma = (n1 - n2)/2
+            let res = document.getElementById('situacao')
+            res.innerHTML = `<p>Calculando o troco pela compra do <mark>${nom}</mark>.</p>`
+            res.innerHTML += `<p>O troco será <mark>${n2 - n1}</mark>.</p>` .
+            res.innerHTML += `<p>O troco será de <mark>${med}</mark>.</p>`
+        }
+    </script>
